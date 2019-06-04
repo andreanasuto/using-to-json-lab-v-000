@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     respond_to do |format|
      format.html { render :show }
-     format.xml { render :xml => @people.to_xml }
+     format.json { render :xml => @people.to_xml }
    end
   end
 
