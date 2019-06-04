@@ -24,6 +24,10 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    respond_to do |format|
+     format.html { render :show }
+     format.xml { render :xml => @people.to_xml }
+   end
   end
 
 # e.g.
